@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour
             var explosion2 = Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
             deathAudio.Play();
             // destroy player
+            Destroy(gameObject);
             Destroy(explosion2, 3.0f); //waits 3.0f before destroying
         }
     }
